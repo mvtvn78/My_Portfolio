@@ -1,0 +1,43 @@
+.cover_photo
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.p_btn_on_cover_photo 
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.p_btn_on_cover_photo  .btn_volume
+{
+   width: 32px;
+   height: 32px;
+   z-index: 1;
+   position: absolute;
+   display: block;
+   top: 10px;
+   right:  10px;
+}
+.my_info
+{
+  z-index: 1;
+   position: absolute;
+   display: flex;
+   gap: 10px;
+   bottom: 10px;
+   right:  10px;
+}
+
+
+#video{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    pointer-events: none;
+    filter:  drop-shadow(0 0 10px #E8B86D) drop-shadow(0 0 20px #AAB396) drop-shadow(0 0 40px #CEDF9F);
+}
