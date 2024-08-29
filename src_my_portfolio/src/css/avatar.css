@@ -1,0 +1,32 @@
+.avatar
+{
+    height: 60%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:25%;
+    background: #ffffff;
+    border-radius: 48%;
+}
+.avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    filter:  drop-shadow(0 0 100px #ffff);
+} 
+.my_name 
+{
+    transform: translateY(80%);
+}
+.my_name  span
+{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #050505;
+}
+.product-item
+{
+    width: calc(25% - 25px); /* 33.33% cho 3 sản phẩm trên 1 hàng, trừ đi khoảng cách giữa các sản phẩm */
+}
