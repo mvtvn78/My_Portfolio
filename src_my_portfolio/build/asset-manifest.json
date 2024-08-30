@@ -1,16 +1,25 @@
 {
   "files": {
-    "main.css": "/My_Portfolio/static/css/main.a9dc046f.css",
-    "main.js": "/My_Portfolio/static/js/main.5b6166db.js",
+    "main.css": "/My_Portfolio/static/css/main.928a579b.css",
+    "main.js": "/My_Portfolio/static/js/main.2fc8ec37.js",
     "static/js/453.addfd3b7.chunk.js": "/My_Portfolio/static/js/453.addfd3b7.chunk.js",
     "static/media/5636516356524.mp4": "/My_Portfolio/static/media/5636516356524.524a6a2fed81662d7678.mp4",
+    "static/media/webshop.png": "/My_Portfolio/static/media/webshop.e4e7ac88d8f0cc30a031.png",
+    "static/media/mt5_user.png": "/My_Portfolio/static/media/mt5_user.240eaa8dba767eceabe3.png",
+    "static/media/MotoA1.png": "/My_Portfolio/static/media/MotoA1.57b86a67e0b9026f3ed4.png",
+    "static/media/student_manage.png": "/My_Portfolio/static/media/student_manage.39395e910f718d48ab7d.png",
+    "static/media/admin_mt5.png": "/My_Portfolio/static/media/admin_mt5.fa75c13d1b11e240d61c.png",
+    "static/media/puzzle_game.png": "/My_Portfolio/static/media/puzzle_game.a9c0bf6000ea1837ae92.png",
+    "static/media/demoBEmt5.png": "/My_Portfolio/static/media/demoBEmt5.b87e7d88328bdbe4668b.png",
+    "static/media/student_manager.png": "/My_Portfolio/static/media/student_manager.0e833aed1f658508883e.png",
+    "static/media/34832482.jpg": "/My_Portfolio/static/media/34832482.a62454925486f2e0169f.jpg",
     "index.html": "/My_Portfolio/index.html",
-    "main.a9dc046f.css.map": "/My_Portfolio/static/css/main.a9dc046f.css.map",
-    "main.5b6166db.js.map": "/My_Portfolio/static/js/main.5b6166db.js.map",
+    "main.928a579b.css.map": "/My_Portfolio/static/css/main.928a579b.css.map",
+    "main.2fc8ec37.js.map": "/My_Portfolio/static/js/main.2fc8ec37.js.map",
     "453.addfd3b7.chunk.js.map": "/My_Portfolio/static/js/453.addfd3b7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9dc046f.css",
-    "static/js/main.5b6166db.js"
+    "static/css/main.928a579b.css",
+    "static/js/main.2fc8ec37.js"
   ]
 }

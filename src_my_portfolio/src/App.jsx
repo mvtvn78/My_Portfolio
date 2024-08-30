@@ -3,9 +3,10 @@ import { Avatar, Card, Flex, Layout, Switch, Tooltip } from "antd";
 import video from './data/5636516356524.mp4';
 import avatar from './data/34832482.jpg'
 import "./css/cover_photo.css";
+import "./css/mymodal.css";
 import "./css/avatar.css";
-import {MutedOutlined,SoundOutlined,GoogleOutlined,GithubOutlined,WhatsAppOutlined } from '@ant-design/icons';
-import { Button } from "antd";
+import {MutedOutlined,SoundOutlined,GoogleOutlined,GithubOutlined,CloseOutlined } from '@ant-design/icons';
+import { Button ,Modal } from "antd";
 import data from './data/data';
 import Meta from 'antd/es/card/Meta';
 const { Header, Footer, Sider, Content } = Layout;
@@ -34,16 +35,23 @@ const layoutStyle = {
 };
 const App = () => {
   const [isMuted,SetIsMuted] = useState(true)
+  const [index,SetIndex] = useState(0)
+  const [isOpen,SetIsOpen]= useState(false)
+  const handleClickProduct=(idx)=>{
+    SetIndex(idx)
+    SetIsOpen(true)
+  }
   useEffect(()=>{
-    console.log(data);
+    console.log(data)
   },[])
   return ( 
-      <Card>
+    <>
+      <Card style={ isOpen ? {opacity:"0.77",pointerEvents:'none',userSelect:'none'}:{}}>
         <Layout style={layoutStyle}>
             <Header  style={headerStyle}  >
             <div className="cover_photo">
               <div className="p_btn_on_cover_photo">
-                <Tooltip title="Bật âm thanh" >
+                <Tooltip title={isMuted ? "Bật âm thanh" : "Tắt âm thanh"} >
                       <Button className='btn_volume' onClick={()=> {SetIsMuted(!isMuted)}} shape="circle" icon={ !isMuted ? <SoundOutlined /> :  <MutedOutlined />  } />
                   </Tooltip>
                   <div className="my_info">
@@ -80,13 +88,21 @@ const App = () => {
                     return (
                       <div className="product-item" key={idx}>
                         <Card
+                            onClick={()=>{handleClickProduct(idx)}}
                             bordered={false}
                             hoverable
+                            className='hover_card'
                             cover={<img alt="example" src={val.image} 
+                              style={
+                                {
+                                  aspectRatio: "16 / 9",
+                                  objectFit: 'cover'
+                                }
+                              }
                              />}
                             size ='default'
                             style={
-                              {height:'100%'}
+                              {height:'100%', transition:'all 1s'}
                             }
                           >         
                             <Meta  avatar={
@@ -109,9 +125,20 @@ const App = () => {
 
               </div>
             </Content>
-           
+          
         </Layout>
     </Card>
+    {isOpen ? 
+      <div className="container">
+        <div className="mymodal">
+            <Tooltip title="Nhấn để thoát khỏi">
+                <Button shape="circle" icon={<CloseOutlined />} onClick={()=>{SetIsOpen(false)}} />
+            </Tooltip>
+            <video src={data[index].videoURL} controls autoPlay></video>
+       </div>
+       </div>
+      :""}
+    </>
   )
 };
 
