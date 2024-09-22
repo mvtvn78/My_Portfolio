@@ -1,0 +1,26 @@
+@media only screen and (max-width: 1200px) {
+    .product-item
+    {
+        width: calc(50% - 25px); /* 33.33% cho 3 sản phẩm trên 1 hàng, trừ đi khoảng cách giữa các sản phẩm */
+    }  
+}
+@media only screen and (max-width: 600px) {
+    #layout
+    {
+        padding: 0 !important;
+    }
+    .avatar
+    {
+        height: 200px;
+        width: 200px;
+        top:35%;
+    }
+    .product-item
+    {
+        width: 100%;
+    }
+   
+    .mymodal{
+       width: 100%;
+    }
+}

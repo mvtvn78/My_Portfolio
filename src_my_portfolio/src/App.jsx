@@ -5,6 +5,7 @@ import avatar from './data/34832482.jpg'
 import "./css/cover_photo.css";
 import "./css/mymodal.css";
 import "./css/avatar.css";
+import "./css/app.css"
 import {MutedOutlined,SoundOutlined,GoogleOutlined,GithubOutlined,CloseOutlined } from '@ant-design/icons';
 import { Button ,Modal } from "antd";
 import data from './data/data';
@@ -47,7 +48,7 @@ const App = () => {
   return ( 
     <>
       <Card style={ isOpen ? {opacity:"0.77",pointerEvents:'none',userSelect:'none'}:{}}>
-        <Layout style={layoutStyle}>
+        <Layout style={layoutStyle} id='layout'>
             <Header  style={headerStyle}  >
             <div className="cover_photo">
               <div className="p_btn_on_cover_photo">
@@ -75,7 +76,7 @@ const App = () => {
                   <span>Mai Văn Tiền(Mvt)</span>
             </div>
             </Header>
-            <Content style={contentStyle}>
+            <Content  style={contentStyle} >
               <Flex gap="small" wrap justify='center' >
                 <Button type="primary" block size="large">Sản phẩm</Button>
                 <Button  block size="large">Video của tôi</Button>

@@ -7,6 +7,8 @@
     top:25%;
     background: #ffffff;
     border-radius: 48%;
+    pointer-events: none;
+    user-select: none;
 }
 .avatar img {
     width: 100%;
@@ -18,6 +20,8 @@
 .my_name 
 {
     transform: translateY(80%);
+    user-select: none;
+    pointer-events: none;
 }
 .my_name  span
 {
@@ -28,7 +32,7 @@
 }
 .product-item
 {
-    width: calc(25% - 25px); /* 33.33% cho 3 sản phẩm trên 1 hàng, trừ đi khoảng cách giữa các sản phẩm */
+    width: calc(33.33% - 25px); /* 33.33% cho 3 sản phẩm trên 1 hàng, trừ đi khoảng cách giữa các sản phẩm */
 }
 .hover_card:hover img{
     transform: scale(1.1);
