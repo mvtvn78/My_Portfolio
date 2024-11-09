@@ -83,7 +83,7 @@ const App = () => {
               </Flex>
 
               <div style={ {marginTop: '20px'}} >
-              <Card title="Các sản phẩm của tôi" bordered style={{textAlign:'left'}}  size ='default'>
+              <Card title="Các sản phẩm" bordered style={{textAlign:'left'}}  size ='default'>
                 <Flex wrap gap='25px' >
                   {data.map((val,idx)=>{
                     return (
