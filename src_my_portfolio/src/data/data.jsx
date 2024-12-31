@@ -1,5 +1,13 @@
 export default [
-
+    {
+        "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPm9LONJfyfu-u05yRzqNRjBsWnXpjrLObnQ&s",
+        "title": "Đồ án ĐHMT",
+        "language":"OpenGL/C++",
+        "image": require("./dohoamaytinh.png"),
+        "videoURL":require("./dohoamaytinh.mkv"),
+        "linkGithub":"github.com/mvtvn78/da_dhmt",
+        "finishedDay": "Dec 29, 2024"
+    },
     {
         "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYrNVwxlBhUzwBd6H4YqdJckckasr4N6PjQw&s",
         "title": "Backend Âm nhạc Mt5",
