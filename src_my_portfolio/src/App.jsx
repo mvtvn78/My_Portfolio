@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Avatar, Card, Flex, Layout, Switch, Tooltip } from "antd";
-import video from './data/5636516356524.mp4';
-import avatar from './data/34832482.jpg'
 import "./css/cover_photo.css";
 import "./css/mymodal.css";
 import "./css/avatar.css";
 import "./css/app.css"
 import {MutedOutlined,SoundOutlined,GoogleOutlined,GithubOutlined,CloseOutlined } from '@ant-design/icons';
 import { Button ,Modal } from "antd";
-import data from './data/data';
+import data from './services/project'
+import info from './services/info';
 import Meta from 'antd/es/card/Meta';
 const { Header, Footer, Sider, Content } = Layout;
 const headerStyle = {
@@ -43,7 +42,7 @@ const App = () => {
     SetIsOpen(true)
   }
   useEffect(()=>{
-    console.log(data)
+    // console.log(data)
   },[])
   return ( 
     <>
@@ -57,33 +56,32 @@ const App = () => {
                   </Tooltip>
                   <div className="my_info">
                     <Tooltip title="GitHub của tôi" >
-                        <Button onClick={() => window.open('https://github.com/mvtvn78', '_blank', 'noopener')} shape="circle" icon={ <GithubOutlined />  } />
+                        <Button onClick={() => window.open(info.githubLink, '_blank', 'noopener')} shape="circle" icon={ <GithubOutlined />  } />
                     </Tooltip>
-
                     <Tooltip title="Email của tôi"  >
-                        <Button   onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=mvt78vn@gmail.com', '_blank', 'noopener')} shape="circle" icon={ <GoogleOutlined />   } />
+                        <Button  onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to='+info.emailContact, '_blank', 'noopener')} shape="circle" icon={ <GoogleOutlined />   } />
                     </Tooltip>
                   </div>
               </div>
                 <video muted={isMuted}  autoPlay loop id='video'>
-                    <source src={video} type="video/mp4" />
+                    <source src={info.coverVideo} type="video/mp4" />
                 </video>
             </div>
             <div className="avatar">
-                    <img src={avatar} alt="" />
+                    <img src={info.avatarURL} alt="" />
               </div>
             <div className="my_name">
-                  <span>Mai Văn Tiền(Mvt)</span>
+                  <span>{info.authorName}</span>
             </div>
             </Header>
             <Content  style={contentStyle} >
-              <Flex gap="small" wrap justify='center' >
-                <Button type="primary" block size="large">Sản phẩm</Button>
+              <Flex gap="small" wrap justify='center' > 
+                <Button type="primary" block size="large">Dự án của tôi</Button>
                 <Button  block size="large">Video của tôi</Button>
               </Flex>
 
               <div style={ {marginTop: '20px'}} >
-              <Card title="Các sản phẩm" bordered style={{textAlign:'left'}}  size ='default'>
+              <Card title="Các dự án nho nhỏ" bordered style={{textAlign:'left'}}  size ='default'>
                 <Flex wrap gap='25px' >
                   {data.map((val,idx)=>{
                     return (
