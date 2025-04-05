@@ -1,1 +1,2 @@
 *.mkv filter=lfs diff=lfs merge=lfs -text
+src_my_portfolio/build/static/media/mvtfilm.47e0e5471f7877e41aed.mkv filter=lfs diff=lfs merge=lfs -text
