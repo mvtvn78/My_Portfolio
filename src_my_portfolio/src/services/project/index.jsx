@@ -14,7 +14,7 @@ export default [
         "title": "Đồ án ĐHMT",
         "language":"OpenGL/C++",
         "image": require("../../data/dohoamaytinh.png"),
-        "videoURL":require("../../data/dohoamaytinh.mkv"),
+        "videoURL":"https://www.dropbox.com/scl/fi/gtntkj1jg09gfcmc2uecm/dohoamaytinh.mkv?rlkey=gt03fgj34yhtyvyklcqc28gt1&st=lefkqj3p&raw=1",   
         "linkGithub":"github.com/mvtvn78/da_dhmt",
         "finishedDay": "Dec 29, 2024"
     },
