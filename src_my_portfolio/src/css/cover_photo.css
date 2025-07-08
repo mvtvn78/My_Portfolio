@@ -22,9 +22,10 @@
 }
 .my_info
 {
-  z-index: 1;
+   z-index: 1;
    position: absolute;
    display: flex;
+   display: -webkit-flex;
    gap: 10px;
    bottom: 10px;
    right:  10px;
@@ -38,6 +39,11 @@
     top: 0;
     left: 0;
     object-fit: cover;
+    user-select: none;
+    -webkit-user-select: none;
     pointer-events: none;
+    -webkit-filter: drop-shadow(0 0 10px #E8B86D)
+                    drop-shadow(0 0 20px #AAB396)
+                    drop-shadow(0 0 40px #CEDF9F);
     filter:  drop-shadow(0 0 10px #E8B86D) drop-shadow(0 0 20px #AAB396) drop-shadow(0 0 40px #CEDF9F);
 }

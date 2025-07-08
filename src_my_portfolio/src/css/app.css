@@ -3,6 +3,9 @@
     {
         width: calc(50% - 25px); /* 33.33% cho 3 sản phẩm trên 1 hàng, trừ đi khoảng cách giữa các sản phẩm */
     }  
+    .product-item.others{
+        width: calc(100% - 25px); /* 33.33% cho 3 sản phẩm trên 1 hàng, trừ đi khoảng cách giữa các sản phẩm */
+    }
 }
 @media only screen and (max-width: 600px) {
     #layout

@@ -5,11 +5,12 @@ import "./css/mymodal.css";
 import "./css/avatar.css";
 import "./css/app.css"
 import {MutedOutlined,SoundOutlined,GoogleOutlined,GithubOutlined,CloseOutlined } from '@ant-design/icons';
-import { Button ,Modal } from "antd";
-import data from './services/project'
+import { Button  } from "antd";
+import dataProject from './services/project/projects'
+import dataOthers from './services/project/others'
 import info from './services/info';
 import Meta from 'antd/es/card/Meta';
-const { Header, Footer, Sider, Content } = Layout;
+const { Header, Content } = Layout;
 const headerStyle = {
   textAlign: 'center',
   lineHeight: '64px',
@@ -37,6 +38,7 @@ const App = () => {
   const [isMuted,SetIsMuted] = useState(true)
   const [index,SetIndex] = useState(0)
   const [isOpen,SetIsOpen]= useState(false)
+  const [mode,setMode] = useState(0) // 0 : products, 1: others
   const handleClickProduct=(idx)=>{
     SetIndex(idx)
     SetIsOpen(true)
@@ -76,64 +78,102 @@ const App = () => {
             </Header>
             <Content  style={contentStyle} >
               <Flex gap="small" wrap justify='center' > 
-                <Button type="primary" block size="large">Dự án của tôi</Button>
-                <Button  block size="large">Video của tôi</Button>
+                <Button type={mode == 0 ? "primary" : 'default'} block size="large" onClick={()=>{setMode(0)}}>Các sản phẩm của tôi</Button>
+                <Button type={mode == 1 ? "primary" : 'default'} block size="large" onClick={()=>{setMode(1)}}>Các sản phẩm khác</Button>
               </Flex>
 
               <div style={ {marginTop: '20px'}} >
-              <Card title="Các dự án nho nhỏ" bordered style={{textAlign:'left'}}  size ='default'>
-                <Flex wrap gap='25px' >
-                  {data.map((val,idx)=>{
-                    return (
-                      <div className="product-item" key={idx}>
-                        <Card
-                            onClick={()=>{handleClickProduct(idx)}}
-                            bordered={false}
-                            hoverable
-                            className='hover_card'
-                            cover={<img alt="example" src={val.image} 
-                              style={
-                                {
-                                  aspectRatio: "16 / 9",
-                                  objectFit: 'cover'
+                {mode == 0 &&
+                <Card title="Các dự án nho nhỏ" bordered style={{textAlign:'left'}}  size ='default'>
+                  <Flex wrap gap='25px' >
+                    {dataProject.map((val,idx)=>{
+                      return (
+                        <div className="product-item" key={idx}>
+                          <Card
+                              onClick={()=>{handleClickProduct(idx)}}
+                              bordered={false}
+                              hoverable
+                              className='hover_card'
+                              cover={<img alt="example" src={val.image} 
+                                style={
+                                  {
+                                    aspectRatio: "16 / 9",
+                                    objectFit: 'cover'
+                                  }
                                 }
+                              />}
+                              size ='default'
+                              style={
+                                {height:'100%', webkitTransition:'all 1s',transition:'all 1s'}
                               }
-                             />}
-                            size ='default'
-                            style={
-                              {height:'100%', transition:'all 1s'}
-                            }
-                          >         
-                            <Meta  avatar={
-                            <Avatar src={val.avatar} />} 
-                            title={val.title}
-                            description={
-                              <>
-                                <h4>{val.language}</h4>
-                                <p>{val.linkGithub}</p>
-                                <p style={{textAlign:'right'}}><b>{val.finishedDay}</b></p>
-                              </>
-                            } />
-                          </Card>
-                    </div>
-                    )
-                  })}
-                  
-                </Flex>
-                </Card>
-
-              </div>
+                            >         
+                              <Meta  avatar={
+                              <Avatar src={val.avatar} />} 
+                              title={val.title}
+                              description={
+                                <>
+                                  <h4>{val.language}</h4>
+                                  <p>{val.linkGithub}</p>
+                                  <p style={{textAlign:'right'}}><b>{val.finishedDay}</b></p>
+                                </>
+                              } />
+                            </Card>
+                      </div>
+                      )
+                    })}
+                  </Flex>
+                  </Card>
+                }
+                {mode == 1 &&
+                <Card title="Các dự án khác nho nhỏ" bordered style={{textAlign:'left'}}  size ='default'>
+                  <Flex wrap gap='25px' >
+                    {dataOthers.map((val,idx)=>{
+                      return (
+                        <div className="product-item others" key={idx}>
+                          <Card
+                              bordered={false}
+                              hoverable
+                              className='hover_card'
+                              cover={<img alt="example" src={val.image} 
+                                style={
+                                  {
+                                    aspectRatio: "1/1",
+                                    objectFit: 'cover'
+                                  }
+                                }
+                              />}
+                              size ='default'
+                              style={
+                                {height:'100%', webkitTransition:'all 1s',transition:'all 1s'}
+                              }
+                            >         
+                              <Meta  
+                              title={val.title}
+                              description={
+                                <>
+                                  <h4>{val.author}</h4>
+                                  <p style={{textAlign:'right'}}><b>{val.finishedDay}</b></p>
+                                </>
+                              } />
+                            </Card>
+                      </div>
+                      )
+                    })}
+                  </Flex>
+                  </Card>
+                }
+                </div>
             </Content>
           
         </Layout>
     </Card>
-    {isOpen ? 
+    {mode ==0 && isOpen ? 
       <div className="container">
         <div className="mymodal">
             <Tooltip title="Nhấn để thoát khỏi">
                 <Button shape="circle" icon={<CloseOutlined />} onClick={()=>{SetIsOpen(false)}} />
             </Tooltip>
-            <video src={data[index].videoURL} controls autoPlay></video>
+            <video src={dataProject[index].videoURL} controls autoPlay></video>
        </div>
        </div>
       :""}
