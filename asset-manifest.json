@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/My_Portfolio/static/css/main.4ec3fcd6.css",
-    "main.js": "/My_Portfolio/static/js/main.376f0db9.js",
+    "main.css": "/My_Portfolio/static/css/main.39bcbaff.css",
+    "main.js": "/My_Portfolio/static/js/main.412e2666.js",
     "static/js/453.addfd3b7.chunk.js": "/My_Portfolio/static/js/453.addfd3b7.chunk.js",
     "static/media/backendfirst.mkv": "/My_Portfolio/static/media/backendfirst.288a78334b1764d95c0b.mkv",
     "static/media/mt5_user_demo.mp4": "/My_Portfolio/static/media/mt5_user_demo.ff808bd68858be902c7c.mp4",
@@ -14,6 +14,7 @@
     "static/media/motovideo.mp4": "/My_Portfolio/static/media/motovideo.74e9499ef872d9b61a44.mp4",
     "static/media/5636516356524.mp4": "/My_Portfolio/static/media/5636516356524.524a6a2fed81662d7678.mp4",
     "static/media/mvtfilm.png": "/My_Portfolio/static/media/mvtfilm.317d7769e36a101ef696.png",
+    "static/media/ungdung_lo.png": "/My_Portfolio/static/media/ungdung_lo.9901f701157306e3439a.png",
     "static/media/webshop.png": "/My_Portfolio/static/media/webshop.e4e7ac88d8f0cc30a031.png",
     "static/media/mt5_user.png": "/My_Portfolio/static/media/mt5_user.240eaa8dba767eceabe3.png",
     "static/media/MotoA1.png": "/My_Portfolio/static/media/MotoA1.57b86a67e0b9026f3ed4.png",
@@ -26,12 +27,12 @@
     "static/media/dohoamaytinh.png": "/My_Portfolio/static/media/dohoamaytinh.0b9ba57a10f0f234fc90.png",
     "static/media/Tvm_new.jpg": "/My_Portfolio/static/media/Tvm_new.bc23497e0b5d4362f00c.jpg",
     "index.html": "/My_Portfolio/index.html",
-    "main.4ec3fcd6.css.map": "/My_Portfolio/static/css/main.4ec3fcd6.css.map",
-    "main.376f0db9.js.map": "/My_Portfolio/static/js/main.376f0db9.js.map",
+    "main.39bcbaff.css.map": "/My_Portfolio/static/css/main.39bcbaff.css.map",
+    "main.412e2666.js.map": "/My_Portfolio/static/js/main.412e2666.js.map",
     "453.addfd3b7.chunk.js.map": "/My_Portfolio/static/js/453.addfd3b7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ec3fcd6.css",
-    "static/js/main.376f0db9.js"
+    "static/css/main.39bcbaff.css",
+    "static/js/main.412e2666.js"
   ]
 }
