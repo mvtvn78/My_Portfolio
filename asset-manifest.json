@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/My_Portfolio/static/css/main.39bcbaff.css",
-    "main.js": "/My_Portfolio/static/js/main.412e2666.js",
+    "main.js": "/My_Portfolio/static/js/main.33619977.js",
     "static/js/453.addfd3b7.chunk.js": "/My_Portfolio/static/js/453.addfd3b7.chunk.js",
     "static/media/backendfirst.mkv": "/My_Portfolio/static/media/backendfirst.288a78334b1764d95c0b.mkv",
     "static/media/mt5_user_demo.mp4": "/My_Portfolio/static/media/mt5_user_demo.ff808bd68858be902c7c.mp4",
@@ -17,22 +17,24 @@
     "static/media/ungdung_lo.png": "/My_Portfolio/static/media/ungdung_lo.9901f701157306e3439a.png",
     "static/media/webshop.png": "/My_Portfolio/static/media/webshop.e4e7ac88d8f0cc30a031.png",
     "static/media/mt5_user.png": "/My_Portfolio/static/media/mt5_user.240eaa8dba767eceabe3.png",
+    "static/media/dfake.png": "/My_Portfolio/static/media/dfake.108d3ad3a4de15bd5c1c.png",
     "static/media/MotoA1.png": "/My_Portfolio/static/media/MotoA1.57b86a67e0b9026f3ed4.png",
+    "static/media/pneum.png": "/My_Portfolio/static/media/pneum.ce38f17622a94340f667.png",
     "static/media/gameCplus.png": "/My_Portfolio/static/media/gameCplus.4673cb7f153c8d263b02.png",
     "static/media/student_manage.png": "/My_Portfolio/static/media/student_manage.39395e910f718d48ab7d.png",
     "static/media/admin_mt5.png": "/My_Portfolio/static/media/admin_mt5.fa75c13d1b11e240d61c.png",
     "static/media/puzzle_game.png": "/My_Portfolio/static/media/puzzle_game.a9c0bf6000ea1837ae92.png",
     "static/media/demoBEmt5.png": "/My_Portfolio/static/media/demoBEmt5.b87e7d88328bdbe4668b.png",
     "static/media/student_manager.png": "/My_Portfolio/static/media/student_manager.0e833aed1f658508883e.png",
+    "static/media/avt2025.jpg": "/My_Portfolio/static/media/avt2025.d8865f9a7f34971d33e0.jpg",
     "static/media/dohoamaytinh.png": "/My_Portfolio/static/media/dohoamaytinh.0b9ba57a10f0f234fc90.png",
-    "static/media/Tvm_new.jpg": "/My_Portfolio/static/media/Tvm_new.bc23497e0b5d4362f00c.jpg",
     "index.html": "/My_Portfolio/index.html",
     "main.39bcbaff.css.map": "/My_Portfolio/static/css/main.39bcbaff.css.map",
-    "main.412e2666.js.map": "/My_Portfolio/static/js/main.412e2666.js.map",
+    "main.33619977.js.map": "/My_Portfolio/static/js/main.33619977.js.map",
     "453.addfd3b7.chunk.js.map": "/My_Portfolio/static/js/453.addfd3b7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.39bcbaff.css",
-    "static/js/main.412e2666.js"
+    "static/js/main.33619977.js"
   ]
 }
