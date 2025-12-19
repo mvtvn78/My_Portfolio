@@ -1,13 +1,44 @@
 const PATH_DATA = "../../data/"
+// làm gì, các tính năng bạn xây dựng, các công nghệ sử dụng
 export default [
+    {
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/219px-Python-logo-notext.svg.png",
+        "title": "Website Phát hiện ung thư phổi ở trẻ (86%)",
+        "language":"Python - Tensorflow",
+        "image": require("../../data/pneum.png"),
+        "videoURL": "https://www.dropbox.com/scl/fi/wg27dgrgh8o4bpdismwyu/2025-12-19-10-24-41.mp4?rlkey=e1x8q4ec72xur5l55sljqkxna&st=p31kgl4p&dl=0&raw=1",
+        "linkGithub":"github.com/mvtvn78/pneumonia_classification",
+        "finishedDay": "Oct 31, 2025",
+        "about":"Việc phát hiện một công cụ giúp hỗ trợ bác sĩ hoặc thực tập bác sĩ để chẩn đoán bệnh là điều rất tốt, giúp xác định nhanh khối ung thư và vị trí tổn thương",
+        "features": ["Phân biệt phổi bình thường và viêm phổi","Viêm phổi do virus hay vi khuẩn","Huấn luyện mô hình Resnet50,DenseNet121,EfficientNetB0","Dùng GradCam++ để phát hiện tổn thương phổi"],
+        "tech":["Tensorflow","GradCam++","Flask","ReactJs","TypeScript","ReactBits","DenseNet121"],
+        "role":["Tất cả"]
+    },
      {
         "avatar": "https://education.oracle.com/file/general/p-80-java.png",
         "title": "Ứng dụng Hẹn Hò - Ông Tơ Bà Nguyệt",
         "language":"Java - NodeJS",
         "image": require("../../data/ungdung_lo.png"),
         "videoURL": "https://www.dropbox.com/scl/fi/tzy9kwsjxnh1rumlihb90/ng-d-ng-l-u-ti-n.mp4?rlkey=5xmqkwh8u9ue0sgd77jdhvx3n&st=otdf91s0&raw=1",
-        "linkGithub":"None",
-        "finishedDay": "Jun 18, 2025"
+        "linkGithub":"Private",
+        "finishedDay": "Jun 18, 2025",
+        "about":"Đề tài “Ứng dụng hẹn hò” với Ông Tơ Bà Nguyệt được xây dựng với mục tiêu tạo ra một nền tảng công nghệ mang đậm bản sắc Việt Nam, đồng thời ứng dụng các kỹ thuật hiện đại để hỗ trợ người dùng trong hành trình tìm kiếm tình yêu và xây dựng mối quan hệ lành mạnh. Tên gọi “Ông Tơ Bà Nguyệt” được lấy cảm hứng từ hình tượng dân gian Việt Nam – những vị thần se duyên trong tín ngưỡng và văn hóa truyền thống, biểu tượng cho sự kết nối bền vững và duyên phận giữa con người với nhau. Sự kết hợp giữa yếu tố văn hóa và công nghệ tạo nên một sản phẩm khác biệt so với các ứng dụng hẹn hò hiện có trên thị trường.",
+        "features": ["Tính năng se duyên ghép đôi người lạ","Tính năng gọi điện thoại cho người đã kết duyên","Tính năng chat realtime ","Tính năng OTP xác thực","Tính năng đăng ký & đăng nhập, quên mật khẩu","Tích hợp đăng nhập google","Tính năng tải ảnh và cập nhật thông tin cho người dùng"],
+        "tech":["Java","PeerJS","ExpressJS&TypeScript","MongoDB","Websocket","Restful"],
+        "role":["Tất cả"]
+    },
+    {
+        "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/219px-Python-logo-notext.svg.png",
+        "title": "Website Phát hiện DEEPFAKE 80%",
+        "language":"Python - Pytorch",
+        "image": require("../../data/dfake.png"),
+        "videoURL": "https://www.dropbox.com/scl/fi/3kkmkj9jmy8bz0czgba6p/2025-12-19-10-19-26.mp4?rlkey=k31qrist4x5y4rg88zvf27f0s&st=nnvslmx8&dl=0&raw=1",
+        "linkGithub":"github.com/mvtvn78/deepPhake",
+        "finishedDay": "May 17, 2025",
+        "about":"Trước xu thế AI toàn cầu, việc ứng dụng GAN để giả mạo dung mạo với mục đích xấu đã tạo nên ra nhiều hệ lụy cho người bị giả cho nên cần một công cụ để mà phát hiện deepfake",
+        "features": ["Dùng mô hình haarcascade để tiền xử lý và nhận dạng khuôn mặt","Huấn luyện mô hình Resnet50,Meso4","Tập dữ liệu: https://www.kaggle.com/datasets/manjilkarki/deepfake-and-real-images/data"],
+        "tech":["Flask","Pytorch","Resnet50","Meso4","TypeScript","ReactJs","ReactBits"],
+        "role":["Người phát triển","Người đóng góp ý tưởng"]
     },
     {
         "avatar": "https://avatars.githubusercontent.com/u/958072?s=280&v=4",
@@ -15,8 +46,12 @@ export default [
         "language":"PHP - Python - NodeJS",
         "image": require("../../data/mvtfilm.png"),
         "videoURL": "https://www.dropbox.com/scl/fi/psmb6q58ofj8kswzi0435/mvtfilm.mkv?rlkey=xnlhb5a3afskp5tf2pcfjawm9&st=ggngvtn0&raw=1",
-        "linkGithub":"None",
-        "finishedDay": "Mar 25, 2025"
+        "linkGithub":"Private",
+        "finishedDay": "Mar 25, 2025",
+        "about":"MvtFilm là một ứng dụng website xem phim chủ yếu cho hoạt hình, anime. Tạo ra một website đơn giản với giao diện ưu nhìn và đơn giản cho người dùng, ngoài ra còn tạo một trang web quản lý cho quản trị viên",
+        "features": ["Tính năng xem phim", "Tính năng gợi ý phim dựa theo phim họ gần đây xem", "Tính năng tải phim & lưu trữ phim","Tính năng chỉnh sửa thông tin và bảo mật người dùng", "Quản lý các thực thể cấu thành website","Tính năng đánh giá phim","Tính năng đăng nhập & đăng ký","Tích hợp đăng nhập google","Tính năng bảng xếp hạng phim theo từng loại","Tính năng tìm kiếm phim"],
+        "tech":["PHP Larvel 9","NodeJs","Flask","Tiktok Storage","Mysql"],
+        "role":["Tất cả"]
     },
     {
         "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPm9LONJfyfu-u05yRzqNRjBsWnXpjrLObnQ&s",
@@ -25,7 +60,11 @@ export default [
         "image": require("../../data/dohoamaytinh.png"),
         "videoURL":"https://www.dropbox.com/scl/fi/gtntkj1jg09gfcmc2uecm/dohoamaytinh.mkv?rlkey=gt03fgj34yhtyvyklcqc28gt1&st=lefkqj3p&raw=1",   
         "linkGithub":"github.com/mvtvn78/da_dhmt",
-        "finishedDay": "Dec 29, 2024"
+        "finishedDay": "Dec 29, 2024",
+        "about":"Đồ án môn học đồ họa máy tính",
+        "features": ["Tính năng chuyển cảnh","Tính năng bắn pháo hoa","Thiết kế các cảnh Xuân Hạ Thu Đông"],
+        "tech":["C++","OpenGL"],
+        "role":["Trưởng nhóm","Đảm nhiệm chuyển cảnh và cảnh xuân tích hợp"]
     },
     {
         "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYrNVwxlBhUzwBd6H4YqdJckckasr4N6PjQw&s",
@@ -34,7 +73,11 @@ export default [
         "image": require("../../data/demoBEmt5.png"),
         "videoURL":require("../../data/backendfirst.mkv"),
         "linkGithub":"github.com/mvtvn78/BackEnd_mt5",
-        "finishedDay": "Jun 11, 2024"
+        "finishedDay": "Jun 11, 2024",
+        "about":"Backend Website âm nhạc mt5, sử dụng restfulAP và mô hình MVC để triển khai dự án",
+        "features": ["Tính năng nghe nhạc & tìm kiếm bài hát","Tính năng hiện lyrics theo nhạc","Tính năng đăng nhập & đăng ký","Tính năng theo dõi nghệ sĩ","Tính năng quên mật khẩu xác thực bằng OTP","Quản lý các thực thể cấu hành website"],
+        "tech":["Postman","NodeJs","ExpressJs"],
+        "role":["Tất cả"]
     },
     {
         "avatar": "https://s3-ap-southeast-1.amazonaws.com/homepage-media/wp-content/uploads/2020/03/04092434/NET_Core_Logo.png",
@@ -43,7 +86,11 @@ export default [
         "image": require("../../data/student_manager.png"),
         "videoURL":require("../../data/qlsv_sql.mkv"),
         "linkGithub":"github.com/mvtvn78/Final_HomeWork_Win",
-        "finishedDay": "Jun 9, 2024"
+        "finishedDay": "Jun 9, 2024",
+        "about":"Đồ án quản lý sinh viên bằng Winform",
+        "features": ["Thống kê cơ bản","Tính năng đăng nhập & đăng ký","Thao tác với sinh viên","Thao tác với giáo viên", "Xem điểm"],
+        "tech":["Winform","C#"],
+        "role":["Tất cả"]
     },
     {
         "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZcpvdnbhcRhQ_D-Gxk2yO_MEYCH6hGioKYRiM_rQjZJPez2kxbJ-ODzXYUFtU2uTh78&usqp=CAU",
@@ -52,7 +99,11 @@ export default [
         "image": require("../../data/mt5_user.png"),
         "videoURL":require("../../data/mt5_user_demo.mp4"),
         "linkGithub":"github.com/mvtvn78/Front_end_mt5",
-        "finishedDay": "May 22, 2024"
+        "finishedDay": "May 22, 2024",
+        "about":"Website Âm nhạc Mt5 được phát triển bởi ReactJs",
+        "features": [],
+        "tech":["ReactJs","ReactBootstrap"],
+        "role":["Tất cả"]
     },
     {
         "avatar": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
@@ -61,7 +112,11 @@ export default [
         "image": require("../../data/admin_mt5.png"),
         "videoURL":require("../../data/mt5_admin_demo.mp4"),
         "linkGithub":"github.com/mvtvn78/TeamPTHH",
-        "finishedDay": "Apr 22, 2024"
+        "finishedDay": "Apr 22, 2024",
+        "about":"Website Admin sử dụng HTML,CSS,JS thuần, dùng Jquery để thao tác",
+        "features": [],
+        "tech":["HTML","CSS","Javascript","Jquery"],
+        "role":["Tất cả"]
     },
     {
         "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZcpvdnbhcRhQ_D-Gxk2yO_MEYCH6hGioKYRiM_rQjZJPez2kxbJ-ODzXYUFtU2uTh78&usqp=CAU",
@@ -70,7 +125,11 @@ export default [
         "image": require("../../data/webshop.png"),
         "videoURL":require("../../data/webgameshop.mp4"),
         "linkGithub":"github.com/mvtvn78/MvtGameShop",
-        "finishedDay": "Mar 27, 2024"
+        "finishedDay": "Mar 27, 2024",
+        "about":"Website Game Store là một thiết kế dành cho các website bán game đại lý, với giao diện bắt mắt và đẹp tạo ra một cảm giác gaming khó tả",
+        "features": [],
+        "tech":["ReactJs"],
+        "role":["Tất cả"]
     },
     {
         "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/219px-Python-logo-notext.svg.png",
@@ -79,7 +138,11 @@ export default [
         "image": require("../../data/puzzle_game.png"),
         "videoURL":require("../../data/demo_puzzle.mkv"),
         "linkGithub":"github.com/mvtvn78/PuzzleGame",
-        "finishedDay": "Dec 22, 2023"
+        "finishedDay": "Dec 22, 2023",
+        "about":"Sử dụng thuật toán A* để mà giải game 9 ô",
+        "features": ["Phân mảnh hình ảnh thành 9 vùng","Tráo vị trí","Tìm đường đi ngắn nhất"],
+        "tech":["Python","PyGame"],
+        "role":["Tất cả"]
     },
     {
         "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPm9LONJfyfu-u05yRzqNRjBsWnXpjrLObnQ&s",
@@ -88,7 +151,11 @@ export default [
         "image": require("../../data/gameCplus.png"),
         "videoURL":require("../../data/gameSDL.mkv"),
         "linkGithub":"github.com/mvtvn78/GameSimple",
-        "finishedDay": "Oct 11, 2023"
+        "finishedDay": "Oct 11, 2023",
+        "about":"Chủ yếu cải thiện tư duy lập trình, cách thức để mà một con game hoạt động dựa trên thư viện SDL và ngôn ngữ C++",
+        "features": [],
+        "tech":["C++","SDL"],
+         "role":["Người phát triển","Người tìm tòi"]
     }, 
     {
         "avatar": "https://s3-ap-southeast-1.amazonaws.com/homepage-media/wp-content/uploads/2020/03/04092434/NET_Core_Logo.png",
@@ -97,7 +164,11 @@ export default [
         "image": require("../../data/MotoA1.png"),
         "videoURL":require("../../data/motovideo.mp4"),
         "linkGithub":"github.com/mvtvn78/MotoA1",
-        "finishedDay": "Aug 12, 2023"
+        "finishedDay": "Aug 12, 2023",
+        "about":"Chứa 200 câu hỏi thi bằng lái mô tô A1, giúp tạo ra một công cụ để ôn luyện và mô phỏng việc thi bằng lái A1",
+        "features": [],
+        "tech":["Winform"],
+        "role":["Tất cả"]
     },
     {
         "avatar": "https://s3-ap-southeast-1.amazonaws.com/homepage-media/wp-content/uploads/2020/03/04092434/NET_Core_Logo.png",
@@ -106,7 +177,11 @@ export default [
         "image": require("../../data/student_manage.png"),
         "videoURL":require("../../data/student_1.mkv"),
         "linkGithub":"github.com/mvtvn78/StudentManagement_v1.0",
-        "finishedDay": "Jul 21, 2023"
+        "finishedDay": "Jul 21, 2023",
+        "about":"Tập tành tạo một sản phẩm cửa sổ đầu tiên dựa vào Winform",
+        "features": [],
+        "tech":["Winform"],
+        "role":["Tất cả"]
     }
 
 ]

@@ -1,8 +1,8 @@
 export default [
      {
-        "title": "Ứng dụng Hẹn Hò - Ông Tơ Bà Nguyệt",
+        "title": "Tiểu thuyết: Thế giới ẩn (Hidden World)",
         "image": require("../../data/ungdung_lo.png"),
         "author":"Tiên Văn Mài",
-        "finishedDay": "Jun 18, 2025",
+        "finishedDay": "+oo",
     }
 ]

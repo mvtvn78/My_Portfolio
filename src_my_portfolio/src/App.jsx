@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import { Avatar, Card, Flex, Layout, Switch, Tooltip } from "antd";
+import  { useEffect, useState } from 'react';
+import { Avatar, Card, Flex, Layout, List, Switch, Tag } from "antd";
+import {MutedOutlined,SoundOutlined,GoogleOutlined,GithubOutlined,CloseOutlined, AppstoreOutlined, CheckCircleOutlined, ToolOutlined, UserOutlined } from '@ant-design/icons';
+import { Modal, Row, Col, Typography, Button, Tooltip } from "antd";
+import {  CalendarOutlined } from "@ant-design/icons";
+import dataProject from './services/project/projects';
+import dataOthers from './services/project/others';
+import info from './services/info';
+import Meta from 'antd/es/card/Meta';
 import "./css/cover_photo.css";
 import "./css/mymodal.css";
 import "./css/avatar.css";
-import "./css/app.css"
-import {MutedOutlined,SoundOutlined,GoogleOutlined,GithubOutlined,CloseOutlined } from '@ant-design/icons';
-import { Button  } from "antd";
-import dataProject from './services/project/projects'
-import dataOthers from './services/project/others'
-import info from './services/info';
-import Meta from 'antd/es/card/Meta';
+import "./css/app.css";
+const { Title, Text, Paragraph } = Typography;
 const { Header, Content } = Layout;
 const headerStyle = {
   textAlign: 'center',
@@ -168,14 +170,96 @@ const App = () => {
         </Layout>
     </Card>
     {mode ==0 && isOpen ? 
-      <div className="container">
-        <div className="mymodal">
-            <Tooltip title="Nhấn để thoát khỏi">
-                <Button shape="circle" icon={<CloseOutlined />} onClick={()=>{SetIsOpen(false)}} />
-            </Tooltip>
-            <video src={dataProject[index].videoURL} controls autoPlay></video>
-       </div>
-       </div>
+    
+      <Modal
+      open={isOpen}
+      footer={null}
+      closable={false}
+      width={1280}
+      centered
+      bodyStyle={{ padding: 16 }}
+    >
+      {/* Nút đóng */}
+      <div style={{ textAlign: "right" }}>
+        <Tooltip title="Đóng">
+          <Button
+            shape="circle"
+            icon={<CloseOutlined />}
+            onClick={() => SetIsOpen(false)}
+          />
+        </Tooltip>
+      </div>
+      <Row gutter={8}>
+        {/* Video bên trái */}
+        <Col span={16}>
+          <video
+            src={dataProject[index].videoURL} 
+            controls
+            autoPlay
+            style={{
+              width: "100%",
+              borderRadius: 8,
+              background: "#000",
+            }}
+          />
+        </Col>
+
+        {/* Thông tin bên phải */}
+        <Col span={8}>
+          <Title style={{textAlign:'center'}} level={4}>Mô tả chi tiết</Title>
+          <Card bordered={false} style={{ marginTop: 16 }}>
+      {/* 1️⃣ Ứng dụng làm gì */}
+      <Title level={5}>
+        <AppstoreOutlined /> Ứng dụng làm gì
+      </Title>
+      <Paragraph className="yt-description">
+      {dataProject[index].about} 
+      </Paragraph>
+ {/* 4️⃣ Vai trò trong dự án */}
+    <Title level={5} style={{ marginTop: 16 }}>
+      <UserOutlined /> Vai trò trong dự án
+    </Title>
+    <List
+      size="small"
+      dataSource={dataProject[index].role}
+      renderItem={(item) => <List.Item>• {item}</List.Item>}
+    />
+      {/* 2️⃣ Tính năng xây dựng */}
+      <Title level={5} style={{ marginTop: 16 }}>
+        <CheckCircleOutlined /> Tính năng xây dựng
+      </Title>
+      <List
+        size="small"
+        dataSource={dataProject[index].features}
+        renderItem={(item) => (
+          <List.Item>• {item}</List.Item>
+        )}
+      />
+ 
+      {/* 3️⃣ Công nghệ sử dụng */}
+      <Title level={5} style={{ marginTop: 16 }}>
+        <ToolOutlined /> Công nghệ sử dụng
+      </Title>
+      <div>
+        {dataProject[index].tech.map((t, i) => (
+          <Tag key={i} color="blue" style={{ marginBottom: 6 }}>
+            {t}
+          </Tag>
+        ))}
+      </div>
+     
+    </Card>
+        </Col>
+      </Row>
+
+      {/* Mô tả bên dưới */}
+      <div style={{ marginTop: 16 }}>
+        <Title level={3}>{dataProject[index].title} </Title>
+        <Text type="secondary">
+            <CalendarOutlined /> {dataProject[index].finishedDay}
+          </Text>
+      </div>
+    </Modal>
       :""}
     </>
   )
