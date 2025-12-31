@@ -90,7 +90,7 @@ const App = () => {
                   <Flex wrap gap='25px' >
                     {dataProject.map((val,idx)=>{
                       return (
-                        <div className="product-item" key={idx}>
+                        <div className="product-item" id={idx} key={idx}>
                           <Card
                               onClick={()=>{handleClickProduct(idx)}}
                               bordered={false}
