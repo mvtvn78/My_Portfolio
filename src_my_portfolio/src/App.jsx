@@ -41,13 +41,42 @@ const App = () => {
   const [index,SetIndex] = useState(0)
   const [isOpen,SetIsOpen]= useState(false)
   const [mode,setMode] = useState(0) // 0 : products, 1: others
-  const handleClickProduct=(idx)=>{
-    SetIndex(idx)
-    SetIsOpen(true)
-  }
-  useEffect(()=>{
-    // console.log(data)
-  },[])
+  const handleClickProduct = (idx) => {
+    window.location.hash = idx;
+  };
+  useEffect(() => {
+  const handleHashChange = () => {
+    const hash = window.location.hash;
+
+    if (!hash) {
+      SetIsOpen(false);
+      return;
+    }
+
+    const idx = Number(hash.substring(1));
+
+    // ❗ CHECK HỢP LỆ
+    if (
+      Number.isInteger(idx) &&
+      idx >= 0 &&
+      idx < dataProject.length
+    ) {
+      SetIndex(idx);
+      SetIsOpen(true);
+    } else {
+      // Hash sai → xoá
+      window.location.hash = "";
+      SetIsOpen(false);
+    }
+  };
+
+  handleHashChange();
+  window.addEventListener("hashchange", handleHashChange);
+
+  return () => {
+    window.removeEventListener("hashchange", handleHashChange);
+  };
+}, []);
   return ( 
     <>
       <Card style={ isOpen ? {opacity:"0.77",pointerEvents:'none',userSelect:'none'}:{}}>
@@ -185,7 +214,11 @@ const App = () => {
           <Button
             shape="circle"
             icon={<CloseOutlined />}
-            onClick={() => SetIsOpen(false)}
+            onClick={() => {
+              SetIsOpen(false)
+               window.location.hash = "";
+            } 
+          }
           />
         </Tooltip>
       </div>
