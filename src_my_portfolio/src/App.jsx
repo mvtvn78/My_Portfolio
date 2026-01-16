@@ -42,32 +42,26 @@ const App = () => {
   const [isOpen,SetIsOpen]= useState(false)
   const [mode,setMode] = useState(0) // 0 : products, 1: others
   const handleClickProduct = (idx) => {
-    window.location.hash = idx;
+    window.location.hash = dataProject[idx].url; 
   };
   useEffect(() => {
   const handleHashChange = () => {
     const hash = window.location.hash;
-
     if (!hash) {
       SetIsOpen(false);
       return;
     }
-
-    const idx = Number(hash.substring(1));
-
-    // ❗ CHECK HỢP LỆ
-    if (
-      Number.isInteger(idx) &&
-      idx >= 0 &&
-      idx < dataProject.length
-    ) {
-      SetIndex(idx);
+    const findEl = dataProject.findIndex(x => "#"+x.url === hash);
+    console.log(findEl)
+    if(findEl != -1){
+      SetIndex(findEl);
       SetIsOpen(true);
-    } else {
-      // Hash sai → xoá
+    }
+    else{
       window.location.hash = "";
       SetIsOpen(false);
     }
+   
   };
 
   handleHashChange();
@@ -240,6 +234,7 @@ const App = () => {
         {/* Thông tin bên phải */}
         <Col span={8}>
           <Title style={{textAlign:'center'}} level={4}>Mô tả chi tiết</Title>
+       
           <Card bordered={false} style={{ marginTop: 16 }}>
       {/* 1️⃣ Ứng dụng làm gì */}
       <Title level={5}>
@@ -288,9 +283,12 @@ const App = () => {
       {/* Mô tả bên dưới */}
       <div style={{ marginTop: 16 }}>
         <Title level={3}>{dataProject[index].title} </Title>
-        <Text type="secondary">
+        <Text type="secondary" >
             <CalendarOutlined /> {dataProject[index].finishedDay}
           </Text>
+         <div>
+           <GithubOutlined /> {dataProject[index].linkGithub}
+         </div>
       </div>
     </Modal>
       :""}

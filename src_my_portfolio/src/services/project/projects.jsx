@@ -1,7 +1,22 @@
 const PATH_DATA = "../../data/"
 // làm gì, các tính năng bạn xây dựng, các công nghệ sử dụng
 export default [
+     {
+        "url": "IOT-o-cam-thong-minh",
+        "avatar": "https://education.oracle.com/file/general/p-80-java.png",
+        "title": "IOT ổ cắm thông minh",
+        "language":"Java - SpringBoot",
+        "image": require("../../data/final_iot.jpg"),
+        "videoURL": "https://www.dropbox.com/scl/fi/0ik0u7hng2r4mbue2uawv/cuoinam_iot.mp4?rlkey=waior6rzgip4szwm6srs8ve8w&st=6vhxldr7&dl=0&raw=1",
+        "linkGithub":"github.com/mvtvn78/final_iot",
+        "finishedDay": "Jan 6, 2026",
+        "about":"Đây là một dự án mã nguồn mở nhằm phát triển một ổ cắm thông minh có thể điều khiển từ xa thông qua ứng dụng di động. Ổ cắm này cho phép người dùng bật/tắt thiết bị điện tử, theo dõi mức tiêu thụ năng lượng và lập lịch hoạt động.",
+        "features": ["Điều khiển ổ cắm qua ứng dụng bật/ tắt","Hiển thị công suất thời gian thực về cho ứng dụng","Dùng MQTT thao tác với thiết bị ở tầng device","Dùng Websocket để gửi thông tin cho ứng dụng","Cung cấp Restful API để thao tác với thiết bị ở tầng app","Lưu trữ dữ liệu ở vào cơ sở dữ liệu để dễ dàng truy vết"],
+        "tech":["Java","Java SpringBoot","PostgreSQL","Websocket","MQTT","ESP-IDF","ESP32C3","Relay","ACS712","Nguồn biến đổi 5V","Ổ cắm nối âm"],
+        "role":["Hardware & Backend"]
+    },
     {
+        "url": "AI-phat-hien-ung-thu",
         "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/219px-Python-logo-notext.svg.png",
         "title": "Website Phát hiện ung thư phổi ở trẻ (86%)",
         "language":"Python - Tensorflow",
@@ -15,6 +30,7 @@ export default [
         "role":["Tất cả"]
     },
      {
+        "url": "SW-ong-to-ba-nguyet",
         "avatar": "https://education.oracle.com/file/general/p-80-java.png",
         "title": "Ứng dụng Hẹn Hò - Ông Tơ Bà Nguyệt",
         "language":"Java - NodeJS",
@@ -28,6 +44,7 @@ export default [
         "role":["Tất cả"]
     },
     {
+        "url": "AI-phat-hien-deepfake",
         "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/219px-Python-logo-notext.svg.png",
         "title": "Website Phát hiện DEEPFAKE 80%",
         "language":"Python - Pytorch",
@@ -41,6 +58,7 @@ export default [
         "role":["Người phát triển","Người đóng góp ý tưởng"]
     },
     {
+        "url": "SW-MvtFilm",
         "avatar": "https://avatars.githubusercontent.com/u/958072?s=280&v=4",
         "title": "MvtFilm",
         "language":"PHP - Python - NodeJS",
@@ -54,6 +72,7 @@ export default [
         "role":["Tất cả"]
     },
     {
+        "url": "DH-Ha-Thu-Dong-Xuan",
         "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPm9LONJfyfu-u05yRzqNRjBsWnXpjrLObnQ&s",
         "title": "Đồ án ĐHMT",
         "language":"OpenGL/C++",
@@ -67,6 +86,7 @@ export default [
         "role":["Trưởng nhóm","Đảm nhiệm chuyển cảnh và cảnh xuân tích hợp"]
     },
     {
+        "url": "SW-BackendBasic-Mt5",
         "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYrNVwxlBhUzwBd6H4YqdJckckasr4N6PjQw&s",
         "title": "Backend Âm nhạc Mt5",
         "language":"Node JS / MySQL /MVC",
@@ -80,6 +100,7 @@ export default [
         "role":["Tất cả"]
     },
     {
+        "url": "SW-Quan-Ly-Sinh-Vien-Win",
         "avatar": "https://s3-ap-southeast-1.amazonaws.com/homepage-media/wp-content/uploads/2020/03/04092434/NET_Core_Logo.png",
         "title": "QLSV / SQL Server",
         "language":"Windows Forms : C#",
@@ -93,6 +114,7 @@ export default [
         "role":["Tất cả"]
     },
     {
+        "url": "SW-Trang-User-Mt5",
         "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZcpvdnbhcRhQ_D-Gxk2yO_MEYCH6hGioKYRiM_rQjZJPez2kxbJ-ODzXYUFtU2uTh78&usqp=CAU",
         "title": "Trang Âm nhạc Mt5",
         "language":"React JS / Bootstrap",
@@ -106,6 +128,7 @@ export default [
         "role":["Tất cả"]
     },
     {
+        "url": "SW-Trang-Admin-Mt5",
         "avatar": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
         "title": "Trang Admin Âm nhạc Mt5",
         "language":"Jquery /Ajax/ HTML /CSS / JS",
@@ -119,6 +142,7 @@ export default [
         "role":["Tất cả"]
     },
     {
+        "url": "SW-Do-An-WebsiteTinh-ReactJs",
         "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZcpvdnbhcRhQ_D-Gxk2yO_MEYCH6hGioKYRiM_rQjZJPez2kxbJ-ODzXYUFtU2uTh78&usqp=CAU",
         "title": "Website Game Store",
         "language":"ReactJS framework",
@@ -132,6 +156,7 @@ export default [
         "role":["Tất cả"]
     },
     {
+        "url": "Game-Do-An-Tri-Tue-Nhan-Tao",
         "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/219px-Python-logo-notext.svg.png",
         "title": "Game Trí Tuệ Sắp Xếp",
         "language":"Python / Pygame",
@@ -145,6 +170,7 @@ export default [
         "role":["Tất cả"]
     },
     {
+        "url": "Game-Tim-Hieu-Co-Ban",
         "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPm9LONJfyfu-u05yRzqNRjBsWnXpjrLObnQ&s",
         "title": "Làm quen với game",
         "language":"C++ / SDL2+ ",
@@ -158,6 +184,7 @@ export default [
          "role":["Người phát triển","Người tìm tòi"]
     }, 
     {
+        "url": "SW-MotoA1-WinForm",
         "avatar": "https://s3-ap-southeast-1.amazonaws.com/homepage-media/wp-content/uploads/2020/03/04092434/NET_Core_Logo.png",
         "title": "Luyện thi Mô Tô A1",
         "language":"Windows Forms : C#",
@@ -171,6 +198,7 @@ export default [
         "role":["Tất cả"]
     },
     {
+        "url": "SW-QuanLySinhVien-WinForm",
         "avatar": "https://s3-ap-southeast-1.amazonaws.com/homepage-media/wp-content/uploads/2020/03/04092434/NET_Core_Logo.png",
         "title": "Quản lý Sinh Viên",
         "language":"Windows Forms : C#",
