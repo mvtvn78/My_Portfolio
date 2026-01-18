@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/My_Portfolio/static/css/main.39bcbaff.css",
-    "main.js": "/My_Portfolio/static/js/main.59a8d666.js",
+    "main.js": "/My_Portfolio/static/js/main.b966e159.js",
     "static/js/453.addfd3b7.chunk.js": "/My_Portfolio/static/js/453.addfd3b7.chunk.js",
     "static/media/backendfirst.mkv": "/My_Portfolio/static/media/backendfirst.288a78334b1764d95c0b.mkv",
     "static/media/mt5_user_demo.mp4": "/My_Portfolio/static/media/mt5_user_demo.ff808bd68858be902c7c.mp4",
@@ -23,6 +23,7 @@
     "static/media/gameCplus.png": "/My_Portfolio/static/media/gameCplus.4673cb7f153c8d263b02.png",
     "static/media/student_manage.png": "/My_Portfolio/static/media/student_manage.39395e910f718d48ab7d.png",
     "static/media/admin_mt5.png": "/My_Portfolio/static/media/admin_mt5.fa75c13d1b11e240d61c.png",
+    "static/media/final_iot.jpg": "/My_Portfolio/static/media/final_iot.69fd03a14b64575ad354.jpg",
     "static/media/puzzle_game.png": "/My_Portfolio/static/media/puzzle_game.a9c0bf6000ea1837ae92.png",
     "static/media/demoBEmt5.png": "/My_Portfolio/static/media/demoBEmt5.b87e7d88328bdbe4668b.png",
     "static/media/student_manager.png": "/My_Portfolio/static/media/student_manager.0e833aed1f658508883e.png",
@@ -30,11 +31,11 @@
     "static/media/dohoamaytinh.png": "/My_Portfolio/static/media/dohoamaytinh.0b9ba57a10f0f234fc90.png",
     "index.html": "/My_Portfolio/index.html",
     "main.39bcbaff.css.map": "/My_Portfolio/static/css/main.39bcbaff.css.map",
-    "main.59a8d666.js.map": "/My_Portfolio/static/js/main.59a8d666.js.map",
+    "main.b966e159.js.map": "/My_Portfolio/static/js/main.b966e159.js.map",
     "453.addfd3b7.chunk.js.map": "/My_Portfolio/static/js/453.addfd3b7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.39bcbaff.css",
-    "static/js/main.59a8d666.js"
+    "static/js/main.b966e159.js"
   ]
 }
