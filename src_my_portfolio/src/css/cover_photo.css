@@ -42,8 +42,8 @@
     user-select: none;
     -webkit-user-select: none;
     pointer-events: none;
-    -webkit-filter: drop-shadow(0 0 10px #E8B86D)
-                    drop-shadow(0 0 20px #AAB396)
-                    drop-shadow(0 0 40px #CEDF9F);
-    filter:  drop-shadow(0 0 10px #E8B86D) drop-shadow(0 0 20px #AAB396) drop-shadow(0 0 40px #CEDF9F);
+    -webkit-filter: drop-shadow(0 0 10px #10cee3)
+                    drop-shadow(0 0 20px #08c1b1)
+                    drop-shadow(0 0 40px #021ab8);
+    filter:  drop-shadow(0 0 10px #68c1ea) drop-shadow(0 0 20px #93e1ee);
 }

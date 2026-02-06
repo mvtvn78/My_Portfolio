@@ -91,7 +91,7 @@ const App = () => {
                   </div>
               </div>
                 <video muted={isMuted}  autoPlay loop id='video'>
-                    <source src={info.coverVideo} type="video/mp4" />
+                    <source src={info.coverVideo} type="video/webm" />
                 </video>
             </div>
             <div className="avatar">
