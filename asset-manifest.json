@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/My_Portfolio/static/css/main.2fc1bd81.css",
-    "main.js": "/My_Portfolio/static/js/main.81546d88.js",
+    "main.js": "/My_Portfolio/static/js/main.ef2d937d.js",
     "static/js/453.addfd3b7.chunk.js": "/My_Portfolio/static/js/453.addfd3b7.chunk.js",
     "static/media/backendfirst.mkv": "/My_Portfolio/static/media/backendfirst.288a78334b1764d95c0b.mkv",
     "static/media/mt5_user_demo.mp4": "/My_Portfolio/static/media/mt5_user_demo.ff808bd68858be902c7c.mp4",
@@ -28,14 +28,14 @@
     "static/media/demoBEmt5.png": "/My_Portfolio/static/media/demoBEmt5.b87e7d88328bdbe4668b.png",
     "static/media/student_manager.png": "/My_Portfolio/static/media/student_manager.0e833aed1f658508883e.png",
     "static/media/dohoamaytinh.png": "/My_Portfolio/static/media/dohoamaytinh.0b9ba57a10f0f234fc90.png",
-    "static/media/lemin.jpg": "/My_Portfolio/static/media/lemin.37124a154874e05d4336.jpg",
+    "static/media/356073835_976104480273406__n.jpg": "/My_Portfolio/static/media/356073835_976104480273406_2903911994535812316_n.e06a221c8448216c3146.jpg",
     "index.html": "/My_Portfolio/index.html",
     "main.2fc1bd81.css.map": "/My_Portfolio/static/css/main.2fc1bd81.css.map",
-    "main.81546d88.js.map": "/My_Portfolio/static/js/main.81546d88.js.map",
+    "main.ef2d937d.js.map": "/My_Portfolio/static/js/main.ef2d937d.js.map",
     "453.addfd3b7.chunk.js.map": "/My_Portfolio/static/js/453.addfd3b7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2fc1bd81.css",
-    "static/js/main.81546d88.js"
+    "static/js/main.ef2d937d.js"
   ]
 }
