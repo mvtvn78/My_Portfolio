@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import i18n from 'i18next';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import LazyImage from './LazyImage';
 
 const ITEMS_PER_PAGE = 9;
@@ -7,6 +9,9 @@ const ITEMS_PER_PAGE = 9;
 const ProjectGrid = ({ projects, onProjectClick }) => {
   const { t } = useTranslation();
   const [currentPage, setCurrentPage] = useState(1);
+
+  // Get current language
+  const currentLanguage = i18n.language;
 
   const totalPages = Math.ceil(projects.length / ITEMS_PER_PAGE);
   const startIdx = (currentPage - 1) * ITEMS_PER_PAGE;
@@ -25,61 +30,67 @@ const ProjectGrid = ({ projects, onProjectClick }) => {
     <div className="w-full">
       {/* Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-        {currentProjects.map((project, idx) => (
-          <div
-            key={idx}
-            onClick={() => onProjectClick(project)}
-            className="group cursor-pointer bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-          >
-            {/* Image */}
-            <div className="relative h-48 overflow-hidden bg-gray-200">
-              {typeof project.image === 'string' ? (
-                <LazyImage
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full"
-                  style={{ aspectRatio: '16 / 9', objectFit: 'cover' }}
-                />
-              ) : (
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              )}
-            </div>
+        {currentProjects.map((project, idx) => {
+          // Get language-specific title
+          const languageData = project[currentLanguage] || project.vi || project.en;
+          const displayTitle = languageData?.title || project.title || '';
 
-            {/* Content */}
-            <div className="p-4">
-              {/* Avatar and Title */}
-              <div className="flex gap-3 mb-3">
-                <img
-                  src={project.avatar}
-                  alt="avatar"
-                  className="w-12 h-12 rounded-full object-cover flex-shrink-0"
-                />
-                <div className="flex-1">
-                  <h3 className="font-bold text-sm line-clamp-2">{project.title}</h3>
+          return (
+            <div
+              key={idx}
+              onClick={() => onProjectClick(project)}
+              className="group cursor-pointer bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+            >
+              {/* Image */}
+              <div className="relative h-48 overflow-hidden bg-gray-200">
+                {typeof project.image === 'string' ? (
+                  <LazyImage
+                    src={project.image}
+                    alt={displayTitle}
+                    className="w-full h-full"
+                    style={{ aspectRatio: '16 / 9', objectFit: 'cover' }}
+                  />
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={displayTitle}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                )}
+              </div>
+
+              {/* Content */}
+              <div className="p-4">
+                {/* Avatar and Title */}
+                <div className="flex gap-3 mb-3">
+                  <img
+                    src={project.avatar}
+                    alt="avatar"
+                    className="w-12 h-12 rounded-full object-cover flex-shrink-0"
+                  />
+                  <div className="flex-1">
+                    <h3 className="font-bold text-sm line-clamp-2">{displayTitle}</h3>
+                  </div>
+                </div>
+
+                {/* Metadata */}
+                <div className="space-y-1 text-xs text-gray-600">
+                  {project.language && (
+                    <p className="font-semibold text-gray-700">{project.language}</p>
+                  )}
+                  {project.linkGithub && (
+                    <p className="text-gray-600 line-clamp-1">{project.linkGithub}</p>
+                  )}
+                  {project.finishedDay && (
+                    <p className="text-right font-semibold text-gray-700">
+                      {project.finishedDay}
+                    </p>
+                  )}
                 </div>
               </div>
-
-              {/* Metadata */}
-              <div className="space-y-1 text-xs text-gray-600">
-                {project.language && (
-                  <p className="font-semibold text-gray-700">{project.language}</p>
-                )}
-                {project.linkGithub && (
-                  <p className="text-gray-600 line-clamp-1">{project.linkGithub}</p>
-                )}
-                {project.finishedDay && (
-                  <p className="text-right font-semibold text-gray-700">
-                    {project.finishedDay}
-                  </p>
-                )}
-              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Pagination */}
@@ -88,9 +99,10 @@ const ProjectGrid = ({ projects, onProjectClick }) => {
           <button
             onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
             disabled={currentPage === 1}
-            className="px-4 py-2 rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="p-2 rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            title={t('pagination.previous')}
           >
-            {t('pagination.previous')}
+            <ChevronLeft className="w-5 h-5" />
           </button>
 
           <div className="flex items-center gap-2">
@@ -112,9 +124,10 @@ const ProjectGrid = ({ projects, onProjectClick }) => {
           <button
             onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
             disabled={currentPage === totalPages}
-            className="px-4 py-2 rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="p-2 rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            title={t('pagination.next')}
           >
-            {t('pagination.next')}
+            <ChevronRight className="w-5 h-5" />
           </button>
         </div>
       )}

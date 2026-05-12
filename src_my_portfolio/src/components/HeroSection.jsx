@@ -3,10 +3,10 @@ import { ExternalLink, Mail, Volume2, VolumeX } from 'lucide-react';
 import info from '../author';
 
 const HeroSection = ({ isMuted, onToggleMute }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
-    <div className="relative w-full h-96 bg-white overflow-hidden">
+    <div className="relative w-full h-[450px] bg-white overflow-hidden">
       {/* Video Background */}
       <video
         muted={isMuted}
@@ -20,8 +20,34 @@ const HeroSection = ({ isMuted, onToggleMute }) => {
       {/* Overlay for better text visibility */}
       <div className="absolute inset-0 bg-black/20" />
 
-      {/* Top Right - Sound and Social Icons */}
+      {/* Top Right - Language Selector, Sound and Social Icons */}
       <div className="absolute top-4 right-4 z-10 flex gap-2">
+        {/* Language Selector */}
+        <div className="flex items-center gap-1 bg-white/80 rounded-full p-1 backdrop-blur-sm">
+          <button
+            onClick={() => i18n.changeLanguage('en')}
+            className={`px-3 py-2 rounded-full font-medium transition-colors ${
+              i18n.language === 'en'
+                ? 'bg-blue-500 text-white'
+                : 'text-gray-700 hover:bg-gray-200'
+            }`}
+          >
+            EN
+          </button>
+          <button
+            onClick={() => i18n.changeLanguage('vi')}
+            className={`px-3 py-2 rounded-full font-medium transition-colors ${
+              i18n.language === 'vi'
+                ? 'bg-blue-500 text-white'
+                : 'text-gray-700 hover:bg-gray-200'
+            }`}
+          >
+            VI
+          </button>
+        </div>
+      </div>
+      <div className='absolute bottom-4 right-4 z-10 flex gap-2'>
+        {/* Sound Toggle */}
         <button
           onClick={onToggleMute}
           className="p-2 rounded-full bg-white/80 hover:bg-white transition-colors"
@@ -33,6 +59,8 @@ const HeroSection = ({ isMuted, onToggleMute }) => {
             <Volume2 className="w-5 h-5" />
           )}
         </button>
+
+        {/* GitHub Link */}
         <button
           onClick={() => window.open(info.githubLink, '_blank', 'noopener')}
           className="p-2 rounded-full bg-white/80 hover:bg-white transition-colors"
@@ -40,6 +68,8 @@ const HeroSection = ({ isMuted, onToggleMute }) => {
         >
           <ExternalLink className="w-5 h-5" />
         </button>
+
+        {/* Email Contact */}
         <button
           onClick={() =>
             window.open(
@@ -54,14 +84,13 @@ const HeroSection = ({ isMuted, onToggleMute }) => {
           <Mail className="w-5 h-5" />
         </button>
       </div>
-
       {/* Center - Avatar and Name */}
-      <div className="absolute inset-0 flex flex-col items-center justify-end pb-6">
+      <div className="absolute inset-0 flex flex-col items-center justify-end pb-16">
         <div className="relative">
           <img
             src={info.avatarURL}
             alt="avatar"
-            className="w-32 h-32 rounded-full border-4 border-white object-cover shadow-lg"
+            className="w-48 h-48 rounded-full border-4 border-white object-cover shadow-lg"
           />
         </div>
         <div className="text-center mt-4">

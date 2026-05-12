@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import NavBar from './components/NavBar';
 import HeroSection from './components/HeroSection';
 import ProjectGrid from './components/ProjectGrid';
 import Modal from './components/Modal';
+import CategoryFilter from './components/CategoryFilter';
 import { getCategories, loadProjectsByCategory } from './utils/projectLoader';
 
 const App = () => {
@@ -34,34 +34,43 @@ const App = () => {
 
   const handleProjectClick = (project) => {
     setSelectedProject(project);
+    // Store current scroll position before changing hash
     if (project.url) {
+      const scrollPos = window.scrollY;
       window.location.hash = project.url;
+      // Prevent automatic scroll to top
+      setTimeout(() => {
+        window.scrollTo(0, scrollPos);
+      }, 0);
     }
   };
 
   const handleCloseModal = () => {
     setSelectedProject(null);
+    // Remove hash without causing scroll
+    const scrollPos = window.scrollY;
     window.location.hash = '';
+    setTimeout(() => {
+      window.scrollTo(0, scrollPos);
+    }, 0);
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* NavBar */}
-      <NavBar
-        isMuted={isMuted}
-        onToggleMute={() => setIsMuted(!isMuted)}
-        onCategoryChange={setSelectedCategory}
-        activeCategory={selectedCategory}
+      {/* Hero Section with background video */}
+      <HeroSection isMuted={isMuted} onToggleMute={() => setIsMuted(!isMuted)} />
+
+      {/* Category Filter */}
+      <CategoryFilter 
         categories={categories}
+        activeCategory={selectedCategory}
+        onCategoryChange={setSelectedCategory}
       />
 
-      {/* Main Content with top padding for fixed navbar */}
+      {/* Main Content */}
       <div className="pt-0">
-        {/* Hero Section */}
-        <HeroSection isMuted={isMuted} onToggleMute={() => setIsMuted(!isMuted)} />
-
         {/* Projects Section */}
-        <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="max-w-7xl mx-auto px-4 py-4">
           <h2 className="text-3xl font-bold mb-8 text-gray-800">
             {t('nav.myProducts')}
           </h2>
