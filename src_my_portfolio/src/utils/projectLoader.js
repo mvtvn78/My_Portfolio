@@ -108,3 +108,19 @@ export const getCategoryName = (id) => {
   const category = categories.find(cat => cat.id === id);
   return category ? category.name : id;
 };
+
+/**
+ * Find a project by its URL slug across all categories
+ * @param {string} url - Project URL slug
+ * @returns {object|null} Matching project or null
+ */
+export const getProjectByUrl = (url) => {
+  if (!url) return null;
+
+  for (const categoryProjects of Object.values(projectsByCategory)) {
+    const project = categoryProjects.find(item => item.url === url);
+    if (project) return project;
+  }
+
+  return null;
+};

@@ -4,7 +4,7 @@ import HeroSection from './components/HeroSection';
 import ProjectGrid from './components/ProjectGrid';
 import Modal from './components/Modal';
 import CategoryFilter from './components/CategoryFilter';
-import { getCategories, loadProjectsByCategory } from './utils/projectLoader';
+import { getCategories, getProjectByUrl, loadProjectsByCategory } from './utils/projectLoader';
 
 const App = () => {
   const { t } = useTranslation();
@@ -14,6 +14,28 @@ const App = () => {
   const [projects, setProjects] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const categories = getCategories();
+
+  // Open project modal from URL hash on mount and when hash changes
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.slice(1);
+
+      if (!hash) {
+        setSelectedProject(null);
+        return;
+      }
+
+      const project = getProjectByUrl(hash);
+      setSelectedProject(project || null);
+    };
+
+    // Handle initial hash on page load
+    handleHashChange();
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   // Load projects when category changes
   useEffect(() => {
