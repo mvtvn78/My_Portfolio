@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+@layer components {
+  .btn-volume {
+    @apply absolute top-4 left-4 z-10 bg-white/80 hover:bg-white;
+  }
+
+  .my-info {
+    @apply absolute top-4 right-4 z-10 flex gap-2;
+  }
+
+  .my-info button {
+    @apply bg-white/80 hover:bg-white;
+  }
+
+  .cover-photo {
+    @apply relative w-full h-full overflow-hidden;
+  }
+
+  .cover-photo video {
+    @apply w-full h-full object-cover;
+  }
+
+  .avatar {
+    @apply absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 z-20;
+  }
+
+  .avatar img {
+    @apply w-32 h-32 rounded-full border-4 border-white object-cover shadow-lg;
+  }
+
+  .my-name {
+    @apply absolute bottom-16 left-1/2 transform -translate-x-1/2 text-2xl font-bold text-gray-800;
+  }
+
+  .product-item {
+    @apply flex-shrink-0;
+  }
+
+  .hover-card {
+    @apply transition-all duration-300 hover:shadow-lg;
+  }
+
+  .language-switcher {
+    @apply absolute bottom-4 right-4 z-10 bg-white/80 hover:bg-white rounded-lg p-2;
+  }
+
+  .language-switcher button {
+    @apply px-3 py-1 rounded hover:bg-gray-100 transition-colors;
+  }
+
+  .language-switcher button.active {
+    @apply bg-primary text-white;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

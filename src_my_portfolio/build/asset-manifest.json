@@ -1,41 +1,20 @@
 {
   "files": {
-    "main.css": "/My_Portfolio/static/css/main.2fc1bd81.css",
-    "main.js": "/My_Portfolio/static/js/main.81546d88.js",
+    "main.css": "/My_Portfolio/static/css/main.565497d4.css",
+    "main.js": "/My_Portfolio/static/js/main.38e5fb9e.js",
     "static/js/453.addfd3b7.chunk.js": "/My_Portfolio/static/js/453.addfd3b7.chunk.js",
-    "static/media/backendfirst.mkv": "/My_Portfolio/static/media/backendfirst.288a78334b1764d95c0b.mkv",
-    "static/media/mt5_user_demo.mp4": "/My_Portfolio/static/media/mt5_user_demo.ff808bd68858be902c7c.mp4",
-    "static/media/mt5_admin_demo.mp4": "/My_Portfolio/static/media/mt5_admin_demo.78aa8a3ba460fbd780dd.mp4",
-    "static/media/webgameshop.mp4": "/My_Portfolio/static/media/webgameshop.b07ed7f554a95d983606.mp4",
-    "static/media/demo_puzzle.mkv": "/My_Portfolio/static/media/demo_puzzle.78445072dfe6dffc712d.mkv",
-    "static/media/qlsv_sql.mkv": "/My_Portfolio/static/media/qlsv_sql.263a6c49d56200e9b59d.mkv",
-    "static/media/gameSDL.mkv": "/My_Portfolio/static/media/gameSDL.337389f620690009f594.mkv",
-    "static/media/student_1.mkv": "/My_Portfolio/static/media/student_1.41f1eff2a5d6bcfef702.mkv",
-    "static/media/motovideo.mp4": "/My_Portfolio/static/media/motovideo.74e9499ef872d9b61a44.mp4",
     "static/media/5636516356524.webm": "/My_Portfolio/static/media/5636516356524.6fee19b50c2358e98b33.webm",
-    "static/media/mvtfilm.png": "/My_Portfolio/static/media/mvtfilm.317d7769e36a101ef696.png",
     "static/media/ungdung_lo.png": "/My_Portfolio/static/media/ungdung_lo.9901f701157306e3439a.png",
-    "static/media/webshop.png": "/My_Portfolio/static/media/webshop.e4e7ac88d8f0cc30a031.png",
-    "static/media/mt5_user.png": "/My_Portfolio/static/media/mt5_user.240eaa8dba767eceabe3.png",
-    "static/media/dfake.png": "/My_Portfolio/static/media/dfake.108d3ad3a4de15bd5c1c.png",
-    "static/media/MotoA1.png": "/My_Portfolio/static/media/MotoA1.57b86a67e0b9026f3ed4.png",
     "static/media/pneum.png": "/My_Portfolio/static/media/pneum.ce38f17622a94340f667.png",
-    "static/media/gameCplus.png": "/My_Portfolio/static/media/gameCplus.4673cb7f153c8d263b02.png",
-    "static/media/student_manage.png": "/My_Portfolio/static/media/student_manage.39395e910f718d48ab7d.png",
-    "static/media/admin_mt5.png": "/My_Portfolio/static/media/admin_mt5.fa75c13d1b11e240d61c.png",
     "static/media/final_iot.jpg": "/My_Portfolio/static/media/final_iot.69fd03a14b64575ad354.jpg",
-    "static/media/puzzle_game.png": "/My_Portfolio/static/media/puzzle_game.a9c0bf6000ea1837ae92.png",
-    "static/media/demoBEmt5.png": "/My_Portfolio/static/media/demoBEmt5.b87e7d88328bdbe4668b.png",
-    "static/media/student_manager.png": "/My_Portfolio/static/media/student_manager.0e833aed1f658508883e.png",
-    "static/media/dohoamaytinh.png": "/My_Portfolio/static/media/dohoamaytinh.0b9ba57a10f0f234fc90.png",
-    "static/media/lemin.jpg": "/My_Portfolio/static/media/lemin.37124a154874e05d4336.jpg",
+    "static/media/356073835_976104480273406__n.jpg": "/My_Portfolio/static/media/356073835_976104480273406_2903911994535812316_n.e06a221c8448216c3146.jpg",
     "index.html": "/My_Portfolio/index.html",
-    "main.2fc1bd81.css.map": "/My_Portfolio/static/css/main.2fc1bd81.css.map",
-    "main.81546d88.js.map": "/My_Portfolio/static/js/main.81546d88.js.map",
+    "main.565497d4.css.map": "/My_Portfolio/static/css/main.565497d4.css.map",
+    "main.38e5fb9e.js.map": "/My_Portfolio/static/js/main.38e5fb9e.js.map",
     "453.addfd3b7.chunk.js.map": "/My_Portfolio/static/js/453.addfd3b7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2fc1bd81.css",
-    "static/js/main.81546d88.js"
+    "static/css/main.565497d4.css",
+    "static/js/main.38e5fb9e.js"
   ]
 }
