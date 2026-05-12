@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { ExternalLink, Mail, Volume2, VolumeX } from 'lucide-react';
-import info from '../services/info';
+import info from '../author';
 
 const HeroSection = ({ isMuted, onToggleMute }) => {
   const { t } = useTranslation();
